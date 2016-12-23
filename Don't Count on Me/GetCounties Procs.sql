@@ -1,9 +1,4 @@
 use cachedb;
-select * from states;
-select * from Countries;
-select * from counties;
-
-select s.name,c.countyname from states s join counties c on s.StateId = c.StateId order by s.name,c.CountyName;
 go
 CREATE OR ALTER PROCEDURE dbo.GetCounties
 AS
