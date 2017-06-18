@@ -33,7 +33,7 @@ Here's the query, and then I'll explain what's happening.
         CROSS APPLY string_split(SA1.airports, ',') AS SA2
         JOIN #Airports A ON A.Id = SA2.value
         JOIN #states S ON S.Id = SA1.stateid
-`string_split()` is a Table Valued Function which we *finally* got in SQL Server 2016 after far too many years of having to write (or, let's face it, copy from someone's blog post) inefficient string splitting functions.
+`string_split()` is a Table Valued Function which we *finally* got in SQL Server 2016 after far too many years of having to write (or, let's face it, copy from someone's blog post) inefficient string splitting functions. Important note: even if your database engine is SQL Server 2016, the database you're operating in [must be at `CompatibilityLevel 130`](https://www.mssqltips.com/sqlservertip/4350/parsing-string-data-with-the-new-sql-server-2016-stringsplit-function/)
 ## Breaking it down
 If we take the term `CROSS APPLY` and break it down into its parts, it finally starts to make sense.
 * `APPLY` the `string_split()` function to the `Airports` field of the `#StateAirports` table
