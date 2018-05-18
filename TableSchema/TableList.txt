@@ -1,0 +1,12 @@
+﻿Country
+Operator
+SatUser
+Purpose
+PurposeDetail
+OrbitClass
+OrbitType
+Contractor
+LaunchSite
+LaunchVehicle
+DataSource
+Satellite
